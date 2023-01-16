@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #302e2f;
+}
+.container{
+    padding: 70px 30px;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.container_textareas{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    
+}
+.box_textareas{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1{
+    color: #ffe261;
+}
+p{
+    color: #d7e8d5;
+}
+label{
+    color: #ffe261;
+}
