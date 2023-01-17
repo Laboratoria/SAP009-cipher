@@ -10,28 +10,30 @@
 <body>
   <div class="container" id="root">
     <header>
-    <h1>criptografo.</h1>
+      <h1>criptografo.</h1>
     </header>
     <main>
-    <p> Proteja seu texto criptografando e descriptografando qualquer texto com uma chave de até 2 números.</p>
-    <div class="container_textareas">
-      <div class="box_textareas">
-        <label>Texto para criptografar</label>
-        <textarea></textarea>
-        <div>
-          <input type="number" placeholder="Chave">
-          <button type="button">Criptografar</button>
+      <section>
+        <p> Proteja seu texto criptografando e descriptografando qualquer texto com uma chave de até 2 números.</p>
+        <div class="container_textareas">
+          <div class="box_textareas">
+            <label for="encrypt-area">Texto para criptografar</label>
+            <textarea id="encrypt-area" name="encrypt-area" rows="10" cols="40"> Escreva seu texto aqui</textarea>
+            <div class="box_key_button">
+              <input type="number" placeholder="Chave">
+              <button id="encrypt" type="button">Criptografar</button>
+            </div>
+          </div>
+          <div class="box_textareas">
+            <label for="decrypt-area">Código para descriptografar</label>
+            <textarea id="decrypt-area" name="decrypt-area" rows="10" cols="40"> Escreva seu código aqui</textarea>
+            <div class="box_key_button">
+              <input type="number" placeholder="Chave">
+              <button id="decrypt" type="button">Descriptografar</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="box_textareas">
-        <label>Texto para criptografar</label>
-        <textarea></textarea>
-        <div>
-          <input type="number" placeholder="Chave">
-          <button type="button">Criptografar</button>
-        </div>
-      </div>
-    </div>
+      </section>
     </main>
     <footer>
       <span> Desenvolvido por Angelina Melo</span>
