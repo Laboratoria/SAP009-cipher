@@ -18,17 +18,19 @@
         <div class="container_textareas">
           <div class="box_textareas">
             <label for="encrypt-area">Texto para criptografar</label>
-            <textarea id="encrypt-area" name="encrypt-area" rows="10" cols="40" placeholder=" Escreva seu texto aqui"></textarea>
+            <textarea id="encrypt-area" name="encrypt-area" rows="10" cols="40" placeholder=" Escreva seu texto aqui" 
+            style="text-transform: uppercase" ></textarea>
             <div class="box_key_button">
-              <input type="number" placeholder="Chave">
+              <input type="number" placeholder="Chave" id="key-encrypt">
               <button id="encrypt" type="button">Criptografar</button>
             </div>
           </div>
           <div class="box_textareas">
             <label for="decrypt-area">Código para descriptografar</label>
-            <textarea id="decrypt-area" name="decrypt-area" rows="10" cols="40" placeholder=" Escreva seu código aqui"></textarea>
+            <textarea id="decrypt-area" name="decrypt-area" rows="10" cols="40" placeholder=" Escreva seu código aqui"
+            style="text-transform: uppercase" ></textarea>
             <div class="box_key_button">
-              <input type="number" placeholder="Chave">
+              <input type="number" placeholder="Chave" id="key-decrypt">
               <button id="decrypt" type="button">Descriptografar</button>
             </div>
           </div>

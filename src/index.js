@@ -1,7 +1,7 @@
 import cipher from './cipher.js';
 
 
-alert('ok')
+
 
 //src/index.js: aqui você deve escutar os eventos de DOM, chamar cipher.encode() e cipher.decode().
 //aqui você deve escutar os eventos de DOM, chamar cipher.encode() e cipher.decode().
@@ -9,23 +9,28 @@ alert('ok')
 
 const textareaEncrypt = document.getElementById('encrypt-area');
 const textareaDecrypt = document.getElementById('decrypt-area');
-const encrypt = document.getElementById('encrypt');
-const decrypt = document.getElementById('decrypt');
+const keyEncrypt = document.getElementById('key-encrypt')
+const keyDecrypt = document.getElementById('key-decrypt')
+const encryptButton = document.getElementById('encrypt');
+const decryptButton = document.getElementById('decrypt');
+
+textareaEncrypt.addEventListener('keyup',(valorTextarea)=>{
+    let letter = valorTextarea.target
+    letter.value= letter.value.toUpperCase()
+})
 
 //BOTÃO PARA CRIPTOGRAFAR
-encrypt.addEventListener('click', encryptText);
+encryptButton.addEventListener('click', encryptText);
 function encryptText(){
-alert('ok')
-
-textareaDecrypt.value = textareaEncrypt.value
+let key = keyEncrypt.value
 let message = textareaEncrypt.value
-console.log(message)
+cipher.encode(key,message)
 
 }
 
 
 //BOTÃO PARA DESCRIPTOGRAFAR
-decrypt.addEventListener('click', decryptText)
+decryptButton.addEventListener('click', decryptText)
 function decryptText(){
 alert('ok!')
 
