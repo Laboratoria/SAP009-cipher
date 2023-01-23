@@ -14,17 +14,26 @@ const keyDecrypt = document.getElementById('key-decrypt')
 const encryptButton = document.getElementById('encrypt');
 const decryptButton = document.getElementById('decrypt');
 
+//Transformar as letras em maiúsculas
 textareaEncrypt.addEventListener('keyup',(valorTextarea)=>{
-    let letter = valorTextarea.target
-    letter.value= letter.value.toUpperCase()
+  const letter=valorTextarea.target;
+  letter.value= letter.value.toUpperCase();
+})
+textareaDecrypt.addEventListener('keyup',(valorTextarea)=>{
+  const letter = valorTextarea.target;
+  letter.value= letter.value.toUpperCase();
 })
 
 //BOTÃO PARA CRIPTOGRAFAR
 encryptButton.addEventListener('click', encryptText);
 function encryptText(){
-let key = keyEncrypt.value
-let message = textareaEncrypt.value
-cipher.encode(key,message)
+  if(textareaEncrypt.value ==="" ||keyEncrypt.value === ""){
+    alert('Preencha todos os campos para codificar!')
+  }else{
+    const key = Number(keyEncrypt.value);
+    const message = textareaEncrypt.value;
+    textareaDecrypt.value = cipher.encode(key,message)
+  }
 
 }
 
@@ -32,8 +41,11 @@ cipher.encode(key,message)
 //BOTÃO PARA DESCRIPTOGRAFAR
 decryptButton.addEventListener('click', decryptText)
 function decryptText(){
-alert('ok!')
-
-console.log(textareaDecrypt.value)
-textareaEncrypt.value = textareaDecrypt.value
+  if(textareaDecrypt.value ==="" ||keyDecrypt.value === ""){
+    alert('Preencha todos os campos para decodificar!')
+  }else{
+    const key = Number(keyDecrypt.value)
+    const message = textareaDecrypt.value
+    textareaEncrypt.value = cipher.decode(key,message)
+  }
 }
