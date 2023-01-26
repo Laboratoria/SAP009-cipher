@@ -3,9 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+  
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -17,31 +15,37 @@
     </header>
     <main>
       <section>
-        <p> Proteja seu texto criptografando e descriptografando qualquer texto com uma chave de até 2 números.</p>
+        <p> Proteja seu texto criptografando e descriptografando qualquer texto com uma chave de números.</p>
         <div class="container_textareas">
           <div class="box_textareas">
             <label for="encrypt-area">Texto para criptografar</label>
-            <textarea id="encrypt-area" name="encrypt-area" rows="10" cols="40" placeholder=" Escreva seu texto aqui" 
+            <textarea id="encrypt-area" class="textarea" name="encrypt-area" placeholder=" Escreva seu texto aqui" 
             style="text-transform: uppercase" ></textarea>
             <div class="box_key_button">
-              <input type="number" placeholder="Chave" id="key-encrypt">
-              <button id="encrypt" type="button">Criptografar</button>
+              <input class="input-key" type="number" placeholder="Chave" id="key-encrypt">
+              <button class="buttons" id="encrypt" type="button">Criptografar</button>
             </div>
           </div>
           <div class="box_textareas">
             <label for="decrypt-area">Código para descriptografar</label>
-            <textarea id="decrypt-area" name="decrypt-area" rows="10" cols="40" placeholder=" Escreva seu código aqui"
+            <textarea id="decrypt-area" class="textarea" name="decrypt-area" placeholder=" Escreva seu código aqui"
             style="text-transform: uppercase" ></textarea>
             <div class="box_key_button">
-              <input type="number" placeholder="Chave" id="key-decrypt">
-              <button id="decrypt" type="button">Descriptografar</button>
+              <input class="input-key" type="number" placeholder="Chave" id="key-decrypt">
+              <button class="buttons" id="decrypt" type="button">Descriptografar</button>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer>
-      <span> Desenvolvido por Angelina Melo</span>
+      <span> Desenvolvido por <b>Angelina Melo</b></span>
+      <a href="https://github.com/ajuliamm">
+        <img src="./images/icons8-github.svg">
+      </a>
+      <a href="https://www.linkedin.com/in/angelinamelo/">
+      <img src="./images/icons8-linkedin-circled.svg">
+    </a>
     </footer>
 
 

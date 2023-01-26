@@ -1,12 +1,5 @@
 import cipher from './cipher.js';
 
-
-
-
-//src/index.js: aqui você deve escutar os eventos de DOM, chamar cipher.encode() e cipher.decode().
-//aqui você deve escutar os eventos de DOM, chamar cipher.encode() e cipher.decode().
-
-
 const textareaEncrypt = document.getElementById('encrypt-area');
 const textareaDecrypt = document.getElementById('decrypt-area');
 const keyEncrypt = document.getElementById('key-encrypt')

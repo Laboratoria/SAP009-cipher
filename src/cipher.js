@@ -1,64 +1,52 @@
 const cipher = {
   encode: function (offset,string){
+    if(offset === null || string === [] || offset === 0 || string === 0){
+      throw new TypeError;
+    }
     let result="";
     for (let i = 0; i < string.length; i++) {
-      //const letterCode = " ";
+      
       let letterChanged = " ";
+      if(string.charCodeAt(i)<65 || string.charCodeAt(i) > 90){
+        result += string.charAt(i);
+      }
    
-      if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) {
-        //letterCode = string.charCodeAt(i);
+      else if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) {
+       
         letterChanged = (string.charCodeAt(i) - 65 + offset) % 26 + 65;
 
-        //console.log(string.charCodeAt(i), "+", offset, "=", letterChanged, "=>", String.fromCharCode(letterChanged));
-
-        //console.log(String.fromCharCode(letterCode));
+      
         result = result + String.fromCharCode(letterChanged);
-      } else {
-        //console.log(string[i]);
-
-        //console.log('não é');
-        //console.log("else:", string.charCodeAt(i));
-      }
+      } 
     }
     //console.log(result);
     return result;
   },
   decode: function (offset,string){
+    if((offset === null || string === [] || offset === 0 || string === 0)){
+      throw new TypeError;
+    }
     let result = "";
 
     for (let i = 0; i < string.length; i++) {
 
-
-      //const letterCode = "";
       let letterChanged = "";
 
+      
+      if(string.charCodeAt(i)<65 || string.charCodeAt(i) > 90){
+        result += string.charAt(i);
+      }
+   
+      else if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) {
 
-      if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) {
-        //console.log("if: ", string.charCodeAt(i));
-        //letterCode = string.charCodeAt(i);
         letterChanged = (string.charCodeAt(i) + 65 - offset) % 26 + 65;
 
-        //console.log(string.charCodeAt(i), "+", offset, "=", letterChanged, "=>", String.fromCharCode(letterChanged));
-
-        //console.log(String.fromCharCode(letterCode));
         result = result + String.fromCharCode(letterChanged);
 
 
-      } else {
-        //console.log(string[i]);
-
-        //console.log('não é');
-        //console.log("else:", string.charCodeAt(i));
-
-      }
-
-
-
-
-
+      } 
 
     }
-    //console.log(result);
     return result;
 
   }
