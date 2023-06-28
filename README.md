@@ -56,7 +56,7 @@ A comunicação por chats de rede social como instagram, facebook ou até mesmo 
 ## Links
 
 - Solution URL: [Repositório Github](https://github.com/ajuliamm/SAP009-cipher)
-- Live Site URL: [Link Site](https://ajuliamm.github.io/SAP009-cipher/src/index.html)
+- Live Site URL: [Link Site](https://ajuliamm.github.io/SAP009-cipher/)
 
 
 ## Objetivos de aprendizagem
