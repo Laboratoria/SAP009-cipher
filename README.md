@@ -61,8 +61,6 @@ A comunicação por chats de rede social como instagram, facebook ou até mesmo 
 
 ## Objetivos de aprendizagem
 
-Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projeto. Pense nisso para decidir sua estratégia de trabalho.
-
 ### HTML
 
 - [ ] **Uso de HTML semântico**
