@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" type="imagex/png" href="./images/cadeado.png">
   
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
@@ -23,6 +25,7 @@
             <label for="encrypt-area">Texto para criptografar</label>
             <textarea id="encrypt-area" class="textarea" name="encrypt-area" placeholder=" Escreva seu texto aqui" 
             style="text-transform: uppercase" ></textarea>
+            <button class="clear" id="clear-encrypt">X</button>
             <div class="box_key_button">
               <input class="input-key" type="number" placeholder="Chave" id="key-encrypt">
               <button class="buttons" id="encrypt" type="button">Criptografar</button>
@@ -32,6 +35,7 @@
             <label for="decrypt-area">Código para descriptografar</label>
             <textarea id="decrypt-area" class="textarea" name="decrypt-area" placeholder=" Escreva seu código aqui"
             style="text-transform: uppercase" ></textarea>
+            <button class="clear" id="clear-decrypt">X</button>
             <div class="box_key_button">
               <input class="input-key" type="number" placeholder="Chave" id="key-decrypt">
               <button class="buttons" id="decrypt" type="button">Descriptografar</button>
@@ -49,9 +53,6 @@
       <img src="./images/icons8-linkedin-circled.svg">
     </a>
     </footer>
-
-
-
   </div>
   <script src="index.js" type="module"></script>
 </body>

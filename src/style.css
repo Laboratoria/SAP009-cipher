@@ -5,11 +5,17 @@
     
 
 }
+html{
+    font-size: 62.5%;
+}
 body{
     display: flex;
     justify-content: center;
     background-color: #302e2f;
     
+}
+.container{
+    width: 100vw;
 }
 header{
     
@@ -27,51 +33,79 @@ section{
 }
 .container_textareas{
     display: flex;
-    flex-direction: column;
-    gap: 100px;
     justify-content: center;
+    flex-direction:row;
+    gap: 50px;
+    align-items: center;
+   
     
 }
 .box_textareas{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
 }
-.textarea{
-    
+.textarea{ 
+
     height: 400px;
+    width: 40vw;
     background-color: #d7e8d5;
     padding: 7px;
-    font-size: 22px;
+    font-size: 2.2rem;
+}
+.clear{
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #ffe261;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: grey;
+    border: 1px solid grey;
+    opacity: .7;
+    outline: none;
+   
+}
+.clear:hover{
+        opacity: 1;
+        cursor: pointer;
+}
+.clear:active{
+    opacity: .8;
 }
 
 .box_key_button{
     display: flex;
     justify-content: space-between;
+    width: 40vw;
 
 }
 
 .input-key{
-    width: 310px;
+    width: 45%;
     height: 60px;
     border: 2px solid #d7e8d5;
     box-shadow: 0px 0px 5px 0px #556a52;
     padding: 5px;
-    font-size: 25px;
+    font-size: 2.5rem;
     background-color: #d7e8d5;
     border-radius: 14px 0 14px 0;
  
 }
 
 .buttons{
-    width: 310px;
+    width: 45%;
     height: 60px;
     background-color: #ffe261;
     border-radius: 14px 0 14px 0;
     border: none;
     
     font-weight: 500px;
-    font-size: 25px;
+    font-size: 2.2rem;
     text-transform:uppercase;
     font-weight: 700;
 }
@@ -84,17 +118,18 @@ section{
 h1{
     color: #ffe261;
     font-weight: 100;
-    font-size: 150px;
-    letter-spacing: 3px;
+    font-size: 16.0rem;
+    letter-spacing: 3px;   
+
 }
 p{
     color: #d7e8d5;
     text-align: center;
-    font-size: 35px;
+    font-size: 3.5rem;
 }
 label{
     color: #ffe261;
-    font-size: 30px;
+    font-size: 3.0rem;
 }
 footer{
     margin: 50px 0;
@@ -105,37 +140,82 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 5px;
-    font-size: 18px;
+    font-size: 1.8rem;
+    position: absolute;
 }
 footer img{
     width: 40px;
 }
 
-@media(min-width: 900px){
-    .container_textareas{
-        
-        flex-direction:row;
-        gap: 50px;
-        align-items: center;
-        justify-content: center;
-        
+@media(max-width: 1450px){
+    html{
+        font-size: 60%;
+    }
+    .buttons{
+        font-size: 2.0rem;
+    }
+}
+@media(max-width: 1090px){    
+    .buttons{
+        width: 45%;
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-width: 900px){
+    html{
+        font-size: 55%;
+    }
+    .container_textareas{        
+        flex-direction: column;
+        gap: 100px;   
     }
     .textarea{
-    
-        height: 400px;
-        width: 600px;
-        background-color: #d7e8d5;
-        padding: 7px;
-        font-size: 22px;
-    }
-    .input-key{
-        width: 270px;
+        width: 80vw;
        
-     
     }
+    .box_key_button{
+        display: flex;
+        justify-content: space-between;
+        width: 80vw;
     
+    }    
     .buttons{
         width: 270px;
-        font-size: 20px;
+        font-size: 2.0rem;
     }
+}
+@media (max-width:780px) {
+    html{
+        font-size: 50%;
+    }
+    h1{
+        font-size: 12.0rem;
+    }
+}
+
+@media(max-width:530px){
+    html{
+        font-size: 45%;
+    }
+    h1{
+        font-size: 10.0rem;
+    }
+
+    
+}
+@media(max-width:530px){
+    
+    h1{
+        font-size: 9.0rem;
+    }
+    header{
+        padding: 50px 0;
+    }
+    section{
+        padding: 0 20px;
+        gap: 50px;
+    }
+
+    
 }

@@ -6,6 +6,8 @@ const keyEncrypt = document.getElementById('key-encrypt')
 const keyDecrypt = document.getElementById('key-decrypt')
 const encryptButton = document.getElementById('encrypt');
 const decryptButton = document.getElementById('decrypt');
+const clearEncript = document.getElementById('clear-encrypt');
+const clearDecript = document.getElementById('clear-decrypt');
 
 //Transformar as letras em maiúsculas
 textareaEncrypt.addEventListener('keyup',(valorTextarea)=>{
@@ -42,3 +44,14 @@ function decryptText(){
     textareaEncrypt.value = cipher.decode(key,message)
   }
 }
+
+//BOTÃO PARA LIMPAR
+clearDecript.addEventListener('click', ()=>{
+  textareaDecrypt.value= "";
+  keyDecrypt.value="";
+})
+
+clearEncript.addEventListener('click', ()=>{
+  textareaEncrypt.value = "";
+  keyEncrypt.value="";
+})
